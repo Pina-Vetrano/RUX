@@ -1,0 +1,59 @@
+@import 'normalize.css';
+
+@font-face {
+    font-family: 'MoodboardFont';
+    font-weight: 400;
+    src: url('assets/fonts/moodboardfont-webfont.woff2') format('woff2'),
+         url('assets/fonts/moodboardfont-webfont.woff2') format('woff');
+}
+@font-face {
+    font-family: 'Queensides';
+    font-weight: 400;
+    src: url('../fonts/Queensides-3z7Ey.ttf');
+}
+@font-face {
+    font-family: 'QueensidesL';
+    font-weight: 300;
+    src: url('../fonts/QueensidesLight-ZVj3l.ttf');
+}
+@font-face {
+    font-family: 'QueensidesM';
+    font-weight: 700;
+    src: url('../fonts/QueensidesMedium-x30zV.ttf');
+}
+:root {
+    --color-bg: #ffb4b4;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #2d2d47;
+    }
+
+    [data-theme="light"] {
+        --color-bg: #ffb4b4;
+    }
+
+    [data-theme="dark"] {
+        --color-bg: #2d2d47;
+        --color-txt-dark: #fff;
+    }
+}
+
+body {
+    font-family: 'QueensidesL';
+    font-size: 18px;
+    color: var(--color-txt-dark);
+    background-color: var(--color-bg);
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    font-family: 'MoodboardFont';
+}
+p {
+    font-family: 'QueensidesM';
+    font-size: 23px;
+}
+@media only screen and (min-width: 750px) {}
