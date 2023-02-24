@@ -27,3 +27,19 @@ if(activeTheme !== null){
     setTheme(activeTheme);
 }
 // permet de prendre en compte la dernière modification du theme.
+
+
+// navigation
+
+let navButton = document.querySelector(".btn--burger")
+ 
+navButton.addEventListener("click", toggleNavigation)
+ 
+function toggleNavigation() {
+ if (!document.body.hasAttribute("data-menu")) {
+ document.body.setAttribute("data-menu", true);
+ 
+ } else {
+ document.body.removeAttribute("data-menu");
+ }
+}

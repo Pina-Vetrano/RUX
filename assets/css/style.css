@@ -3,57 +3,219 @@
 @font-face {
     font-family: 'MoodboardFont';
     font-weight: 400;
-    src: url('assets/fonts/moodboardfont-webfont.woff2') format('woff2'),
-         url('assets/fonts/moodboardfont-webfont.woff2') format('woff');
+    src: url('../fonts/moodboardfont-webfont.woff2') format('woff2'),
+        url('../fonts/moodboardfont-webfont.woff') format('woff');
 }
+
 @font-face {
     font-family: 'Queensides';
     font-weight: 400;
     src: url('../fonts/Queensides-3z7Ey.ttf');
 }
+
 @font-face {
     font-family: 'QueensidesL';
     font-weight: 300;
     src: url('../fonts/QueensidesLight-ZVj3l.ttf');
 }
+
 @font-face {
     font-family: 'QueensidesM';
     font-weight: 700;
     src: url('../fonts/QueensidesMedium-x30zV.ttf');
 }
+
 :root {
-    --color-bg: #ffb4b4;
+    --color-bg: #77A3D2;
 }
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --color-bg: #2d2d47;
+        --color-bg: #ffd8e0;
     }
 
     [data-theme="light"] {
-        --color-bg: #ffb4b4;
+        --color-bg: #94beeb;
+        --color-txt: #001f1f;
     }
 
     [data-theme="dark"] {
-        --color-bg: #2d2d47;
-        --color-txt-dark: #fff;
+        --color-bg: #ffd8e0;
+        --color-txt: #001f1f;
     }
 }
 
 body {
     font-family: 'QueensidesL';
     font-size: 18px;
-    color: var(--color-txt-dark);
+    color: var(--color-txt);
     background-color: var(--color-bg);
     padding: 0;
     margin: 0;
 }
 
 .title {
-    font-family: 'MoodboardFont';
+  font-size: 32px;
+  margin-top: 2rem;
+  text-align: center;
 }
+
+
 p {
-    font-family: 'QueensidesM';
     font-size: 23px;
 }
-@media only screen and (min-width: 750px) {}
+img {
+    max-width: 100vh;
+}
+.list--header,
+.list--footer,
+.link--section,
+.list {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .fond {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100%;
+    padding-top: 18vh;
+    background-image: url(../images/background.png);
+  }
+  .headtitle{
+     max-width: 100%;
+  }
+  .header__linklogo {
+    position: relative;
+    width: 69px;
+    height: 50%;
+    margin-left: 1em;
+  }
+  
+  .header--second {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    flex-direction: row-reverse;
+    gap: 2em;
+  }
+  
+  .header__navigation {
+    display: none;
+  }
+  
+  .header__navigation--m {
+    display: none;
+  }
+  
+  /*Burger Menu button*/
+  .header__menu--burger {
+    width: 60px;
+    height: 60px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-color: transparent;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .header--no-display {
+    display: none;
+  }
+  
+  
+  .header--display {
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    margin-bottom: -200px;
+  }
+  
+  
+  /*Header*/
+  .header__btn--theme {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/energy.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  
+  .header__button--txt {
+    /*le laisser en-dessous de dark-mode*/
+    position: absolute;
+    white-space: nowrap;
+    text-indent: 100%;
+  }
+  
+  .list--header,
+  .list {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    padding: 0;
+    font-size: 28px;
+  }
+  
+  .header__span--none {
+    display: none;
+  }
+  
+  .header__navigation {
+    display: none;
+  }
+  
+.home--heading .section--content .logo{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+@media only screen and (min-width: 750px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    margin-top: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    height: 10%;
+    top: 0em;
+  }
+  .header__navigation {
+    margin-left: 30px;
+    display: flex;
+    z-index: 3;
+  }
+  .hero{
+    background-color: coral;
+    background-image: url(/assets/images/backgroundv3.png);
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+  }
+  .fond {
+   
+  }
+  }
