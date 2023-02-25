@@ -43,3 +43,10 @@ function toggleNavigation() {
  document.body.removeAttribute("data-menu");
  }
 }
+
+
+// date copyright
+let answerDate = document.querySelector(".date");
+let today = new Date();
+let year = today.getFullYear();
+answerDate.innerHTML = year;
