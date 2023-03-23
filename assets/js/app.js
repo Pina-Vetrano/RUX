@@ -74,3 +74,25 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+var xValues = ["Restaurer", "Verdure", "Détente", "Sociabiliser","Couvert"];
+var yValues = [18, 25, 20, 11, 17];
+var barColors = ["red", "green","blue","orange","purple"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Meilleurs Top Tasks prélevés" // pas sure de celle catchphrase
+    }
+  }
+});
